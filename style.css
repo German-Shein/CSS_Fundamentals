@@ -2,6 +2,7 @@
 {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 body
@@ -14,9 +15,9 @@ body
 
 .Container
 {
-	width: 800px;
+	width: 1200px;
 	margin: 0 auto;
-    position: relative;
+	position: relative;
 }
 
 .Main_Header
@@ -24,6 +25,13 @@ body
 	background-color: #f7f7f7;
 	padding: 20px 40px; /* Top-Bottom; Left-Right */
 	margin-bottom: 60px;
+}
+
+.Main_Header::after
+{
+	clear: both;
+	content: "";
+	display: block;
 }
 
 .Post_Header
@@ -40,6 +48,8 @@ body
 article
 {
 	margin-bottom: 60px;
+	float: left;
+	width: 800px;
 }
 
 aside
@@ -47,13 +57,20 @@ aside
 	background-color: #f7f7f7;
 	border-top: 5px solid #1098ad;
 	border-bottom: 5px solid #1098ad;
-	padding: 50px 0;
-	width: 500px;
+	padding: 50px 20px;
+	float: right;
+	width: 300px;
+}
+
+footer
+{
+	clear: both;
 }
 
 nav
 {
 	font-size: 18px;
+	float: right;
 }
 
 nav a:link
@@ -119,6 +136,7 @@ h4
 	font-size: 20px;
 	text-transform: uppercase;
 	text-align: center;
+	margin-bottom: 30px;
 }
 
 p
@@ -133,68 +151,8 @@ h3 + p::first-line
 	font-weight: bold;
 }
 
-ol, ul
-{
-	margin-left: 50px;
-}
-
-li
-{
-	font-size: 20px;
-	margin-bottom: 10px;
-}
-
-li:first-child
-{
-	font-weight: bold;
-}
-
-li:last-child
-{
-	font-style: italic;
-	margin-bottom: 0;
-}
-
-/*footer p
-{
-	font-size: 16px;
-}*/
-
-/*article header p
-{
-	font-style: italic;
-}*/
-
-#Author
-{
-	font-style: italic;
-	font-size: 18px;
-}
-
-#Copyright
-{
-	font-size: 16px;
-}
-
-.Related_Author
-{
-	font-size: 18px;
-	font-weight: bold;
-}
-
-.Related_Posts
-{
-	list-style: none;
-}
-
-/*
-li:nth-child(even)
-{
-	color: red;
-}
-*/
-
 /* Maintain this order: link, visited, hover, active */
+
 a:link
 {
 	color: #1098ad;
@@ -218,6 +176,74 @@ a:active
 	font-style: italic;
 }
 
+/* Maintain this order: link, visited, hover, active */
+
+ol, ul
+{
+	margin-left: 50px;
+}
+
+li
+{
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+li:first-child
+{
+	font-weight: bold;
+}
+
+li:last-child
+{
+	font-style: italic;
+	margin-bottom: 0;
+}
+
+/*
+li:nth-child(even)
+{
+	color: red;
+}
+*/
+
+/*
+footer p
+{
+	font-size: 16px;
+}
+*/
+
+/*
+article header p
+{
+	font-style: italic;
+}
+*/
+
+#Author
+{
+	font-style: italic;
+	font-size: 18px;
+}
+
+#Copyright
+{
+	font-size: 16px;
+}
+
+.Related_Author
+{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.Related_Posts
+{
+	list-style: none;
+	margin-left: 0;
+}
+
 .Like_Button
 {
 	position: absolute;
@@ -226,4 +252,22 @@ a:active
 	font-size: 22px;
 	bottom: 50px;
 	right: 50px;
+}
+
+.Author_Image
+{
+	float: left;
+	margin-bottom: 20px;
+}
+
+#Author
+{
+	float: left;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+.Title
+{
+	float: left;
 }
