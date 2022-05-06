@@ -1,0 +1,273 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body
+{
+	color: #444;
+	font-family: sans-serif;
+	border-top: 10px solid #1098ad;
+	
+}
+
+.Container
+{
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.Main_Header
+{
+	background-color: #f7f7f7;
+	padding: 20px 40px; /* Top-Bottom; Left-Right */
+	margin-bottom: 60px;
+}
+
+.Main_Header::after
+{
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.Post_Header
+{
+	margin-bottom: 40px;
+}
+
+.Post_Image
+{
+	height: auto;
+	width: 100%;
+}
+
+article
+{
+	margin-bottom: 60px;
+	float: left;
+	width: 800px;
+}
+
+aside
+{
+	background-color: #f7f7f7;
+	border-top: 5px solid #1098ad;
+	border-bottom: 5px solid #1098ad;
+	padding: 50px 20px;
+	float: right;
+	width: 300px;
+}
+
+footer
+{
+	clear: both;
+}
+
+nav
+{
+	font-size: 18px;
+	float: right;
+}
+
+nav a:link
+{
+	display: inline-block;
+	margin-right: 30px;
+	margin-top: 10px;
+}
+
+nav a:link:last-child
+{
+	margin-right: 0px;
+}
+
+h1, h2, h3
+{
+	color: #1098ad;
+}	
+
+h1
+{
+	font-size: 26px;
+	text-transform: uppercase;
+	font-style: italic;
+}
+
+h1::first-letter
+{
+	font-style: normal;
+	margin-right: 5px;
+}
+
+h2
+{
+	font-size: 40px;
+	margin-bottom: 30px;
+	position: relative;
+}
+
+h2::after
+{
+	background-color: #ffe70e;
+	content: "TOP";
+	color: #444;
+	padding: 5px 10px;
+	font-weight: bold;
+	display: inline-block;
+	font-size: 16px;
+	position: absolute;
+	top: -15px;
+	right: -25px;
+}
+
+h3
+{
+	font-size: 30px;
+	margin-bottom: 20px;
+	margin-top: 40px; /* Collapsing margins: these h3 and p margins don't add up. Larger margin wins */
+}
+
+h4
+{
+	font-size: 20px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+p
+{
+	font-size: 22px;
+	line-height: 1.5;
+	margin-bottom: 15px; /* Collapsing margins: these h3 and p margins don't add up. Larger margin wins */
+}
+
+h3 + p::first-line
+{
+	font-weight: bold;
+}
+
+/* Maintain this order: link, visited, hover, active */
+
+a:link
+{
+	color: #1098ad;
+	text-decoration: none;
+}
+
+a:visited
+{
+	color: #1098ad;
+}
+
+a:hover
+{
+	color: orangered;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:active
+{
+	font-style: italic;
+}
+
+/* Maintain this order: link, visited, hover, active */
+
+ol, ul
+{
+	margin-left: 50px;
+}
+
+li
+{
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+li:first-child
+{
+	font-weight: bold;
+}
+
+li:last-child
+{
+	font-style: italic;
+	margin-bottom: 0;
+}
+
+/*
+li:nth-child(even)
+{
+	color: red;
+}
+*/
+
+/*
+footer p
+{
+	font-size: 16px;
+}
+*/
+
+/*
+article header p
+{
+	font-style: italic;
+}
+*/
+
+#Author
+{
+	font-style: italic;
+	font-size: 18px;
+}
+
+#Copyright
+{
+	font-size: 16px;
+}
+
+.Related_Author
+{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.Related_Posts
+{
+	list-style: none;
+	margin-left: 0;
+}
+
+.Like_Button
+{
+	position: absolute;
+	cursor: pointer;
+	padding: 20px;
+	font-size: 22px;
+	bottom: 50px;
+	right: 50px;
+}
+
+.Author_Image
+{
+	float: left;
+	margin-bottom: 20px;
+}
+
+#Author
+{
+	float: left;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+.Title
+{
+	float: left;
+}
