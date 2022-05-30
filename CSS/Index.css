@@ -20,23 +20,34 @@ body
 	position: relative;
 }
 
-.Main_Header
+.Row
 {
-	background-color: #f7f7f7;
-	padding: 20px 40px; /* Top-Bottom; Left-Right */
+	align-items: flex-start;
+	display: flex;
+	gap: 75px;
 	margin-bottom: 60px;
 }
 
-.Main_Header::after
+.Main_Header
 {
-	clear: both;
-	content: "";
-	display: block;
+	align-items: center;
+	background-color: #f7f7f7;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 40px; /* Top-Bottom; Left-Right */
+	margin-bottom: 60px;
 }
 
 .Post_Header
 {
 	margin-bottom: 40px;
+}
+
+.Author_Section
+{
+	align-items: center;
+	display: flex;
+	margin-bottom: 15px;
 }
 
 .Post_Image
@@ -45,11 +56,10 @@ body
 	width: 100%;
 }
 
+
 article
 {
-	margin-bottom: 60px;
-	float: left;
-	width: 800px;
+	flex: 1;
 }
 
 aside
@@ -57,27 +67,21 @@ aside
 	background-color: #f7f7f7;
 	border-top: 5px solid #1098ad;
 	border-bottom: 5px solid #1098ad;
+	flex-basis: 300px;
+	flex-grow: 0;
+	flex-shrink: 0;
 	padding: 50px 20px;
-	float: right;
-	width: 300px;
-}
-
-footer
-{
-	clear: both;
 }
 
 nav
 {
 	font-size: 18px;
-	float: right;
 }
 
 nav a:link
 {
 	display: inline-block;
 	margin-right: 30px;
-	margin-top: 10px;
 }
 
 nav a:link:last-child
@@ -200,31 +204,12 @@ li:last-child
 	margin-bottom: 0;
 }
 
-/*
-li:nth-child(even)
-{
-	color: red;
-}
-*/
-
-/*
-footer p
-{
-	font-size: 16px;
-}
-*/
-
-/*
-article header p
-{
-	font-style: italic;
-}
-*/
-
 #Author
 {
-	font-style: italic;
 	font-size: 18px;
+	font-style: italic;
+	margin-bottom: 0;
+	margin-left: 15px;
 }
 
 #Copyright
@@ -232,16 +217,35 @@ article header p
 	font-size: 16px;
 }
 
-.Related_Author
-{
-	font-size: 18px;
-	font-weight: bold;
-}
-
 .Related_Posts
 {
 	list-style: none;
 	margin-left: 0;
+}
+
+.Related_Post
+{
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	margin-bottom: 30px;
+}
+
+.Related_Link:link
+{
+	display: block;
+	font-size: 17px;
+	font-weight: bold;
+	font-style: normal;
+	margin-bottom: 5px;
+}
+
+.Related_Author
+{
+	font-size: 14px;
+	font-style: italic;
+	font-weight: normal;
+	margin-bottom: 0;
 }
 
 .Like_Button
@@ -252,22 +256,4 @@ article header p
 	font-size: 22px;
 	bottom: 50px;
 	right: 50px;
-}
-
-.Author_Image
-{
-	float: left;
-	margin-bottom: 20px;
-}
-
-#Author
-{
-	float: left;
-	margin-left: 20px;
-	margin-top: 10px;
-}
-
-.Title
-{
-	float: left;
 }
